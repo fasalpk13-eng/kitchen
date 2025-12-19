@@ -210,7 +210,6 @@
 
 
 
-
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
@@ -320,8 +319,7 @@ function Home({ addOrder }) {
     <div className="h-screen bg-[#1f2433] text-white p-4 sm:p-6 flex flex-col">
       
       {/* HEADER */}
-      <div className="flex items-center justify-between  lg:mr-20
- mt-2">
+      <div className="flex items-center justify-between  mr-15 mt-2">
         <div>
           <h1 className="text-2xl font-bold">Chef Kitchen</h1>
           <p className="text-gray-400 text-sm">Tuesday, 2 March 2024</p>
@@ -357,7 +355,7 @@ function Home({ addOrder }) {
             </span>
 
             {activeTab === tab.id && (
-              <span className="absolute left-0 -bottom-0.5 w-full h-[3px] bg-orange-500 rounded-full"></span>
+              <span className="absolute left-0 -bottom-0.5 w-full h-0.75 bg-orange-500 rounded-full"></span>
             )}
           </button>
         ))}
@@ -370,7 +368,7 @@ function Home({ addOrder }) {
         <div className="relative">
           <button
             onClick={() => setOpenType(!openType)}
-            className="flex items-center justify-between gap-2 bg-[#2a2f42] border border-[#343a52] px-6 py-2 rounded-xl text-sm text-gray-300 min-w-[140px]"
+            className="flex items-center justify-between gap-2 bg-[#2a2f42] border border-[#343a52] px-6 py-2 rounded-xl text-sm text-gray-300 min-w-35"
           >
             {orderType}
             <span>▾</span>
@@ -396,7 +394,7 @@ function Home({ addOrder }) {
       </div>
 
       {/*SCROLL ONLY DISHES */}
-      
+      <div className="flex-1 overflow-y-auto hide-scrollbar mt-6">
         <div className="grid grid-cols-2 mt-6 lg:grid-cols-3 gap-4 sm:gap-16">
           {filteredDishes.length > 0 ? (
             filteredDishes.map((item) => (
@@ -463,8 +461,9 @@ function Home({ addOrder }) {
           )}
         </div>
       </div>
-    
+    </div>
   );
 }
 
 export default Home;
+

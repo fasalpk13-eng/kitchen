@@ -1,43 +1,3 @@
-// import React from 'react'
-// import Sidebar from './Navbar'
-// import Home from './Home'
-// import Second from './second'  
-
-// function Dashboard() {
-//   return (
-//     <div>
-//       <div className="flex h-screen bg-[#1f2433] text-white">
-
-//   {/* LEFT – SIDEBAR */}
-//   <div className="hidden md:block w-[90px] bg-[#1f1d2b] shrink-0">
-//     <Sidebar />
-//   </div>
-
-//   {/* CENTER + RIGHT */}
-//   <div className="flex flex-1 overflow-hidden">
-
-//     {/* CENTER – HOME (SCROLL) */}
-//     <div className="flex-1 overflow-y-auto hide-scrollbar">
-//      <Home />
-//     </div>
-
-//     {/* RIGHT – ORDERS / SECOND */}
-//     <div className="hidden md:block w-[360px] bg-[#1f1d2b] shrink-0">
-//       <Second />
-//     </div>
-
-//   </div>
-// </div>
-
-//     </div>
-//   )
-// }
-
-// export default Dashboard;
-
-
-
-
 // import { useState } from "react";
 // import Sidebar from "./Navbar";
 // import Home from "./Home";
@@ -77,7 +37,7 @@
 //     <div className="flex h-screen bg-[#1f2433] text-white">
 
 //       {/* LEFT – SIDEBAR */}
-//       <div className="hidden md:block w-[90px] bg-[#1f1d2b] shrink-0">
+//       <div className="hidden md:block w-22.5 bg-[#1f1d2b] shrink-0">
 //         <Sidebar />
 //       </div>
 
@@ -90,7 +50,7 @@
 //         </div>
 
 //         {/* RIGHT – ORDERS */}
-//         <div className="hidden md:block w-[360px] bg-[#1f1d2b] shrink-0">
+//         <div className="hidden md:block w-90 bg-[#1f1d2b] shrink-0">
 //           <Second orders={orders} />
 //         </div>
 
@@ -100,9 +60,6 @@
 // }
 
 // export default Dashboard;
-
-
-
 
 
 
@@ -189,13 +146,13 @@ function Dashboard() {
   return (
     <div className="flex h-screen bg-[#1f2433] text-white">
 
-      <div className="hidden md:block w-[90px] bg-[#1f1d2b] shrink-0">
+      <div className="hidden md:block w-22.5 bg-[#1f1d2b] shrink-0">
         <Sidebar />
       </div>
 
       <div className="flex flex-1 overflow-hidden">
 
-        <div className="flex-1 overflow-hidden">
+        <div className="flex-1 overflow-y-auto hide-scrollbar">
           <Home addOrder={addOrder} />
         </div>
 
@@ -205,7 +162,7 @@ function Dashboard() {
     onClick={() => setShowCart(false)}
   >
     <div
-      className="w-[360px] bg-[#1f1d2b] h-full"
+      className="w-90 bg-[#1f1d2b] h-full"
       onClick={(e) => e.stopPropagation()}
     >
       <Second
@@ -252,3 +209,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+

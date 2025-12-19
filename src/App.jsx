@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./Components/Dashboard";
-import First from "./Components/First";
-
-
+import Dashboard from "./Components/Dashboard.jsx";
+import First from "./Components/First.jsx";
 
 function App() {
   return (
