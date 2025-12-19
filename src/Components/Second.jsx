@@ -93,9 +93,11 @@
 
 import deleteicon from "../assets/delete.svg";
 import { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 
 
-function Second({ orders = [], onDelete, onQtyChange, onClear }) {
+
+function Second({ orders = [], onDelete, onQtyChange, onClose }) {
 
   const subtotal = orders.reduce(
     (sum, item) => sum + item.price * item.qty,
@@ -112,9 +114,20 @@ function Second({ orders = [], onDelete, onQtyChange, onClear }) {
 
   return (
     <div className="w-full h-screen bg-[#1f1d2b] rounded-2xl p-4 z-20 text-white flex flex-col ">
-
+      
+      
       {/* HEADER WITH COUNT */}
       <div className="flex justify-between items-center mb-4  ">
+        <div className="flex items-center gap-3 mb-4">
+  {/* BACK TO DASHBOARD */}
+  <button
+    onClick={onClose}
+    className="p-2 rounded-full bg-[#393C49] hover:bg-orange-500 transition"
+  >
+    <FaArrowLeft className="text-sm text-white" />
+  </button>
+  </div>
+
         <h2 className="text-lg font-semibold">
           Orders ({totalItems} items)
         </h2>
@@ -176,10 +189,16 @@ function Second({ orders = [], onDelete, onQtyChange, onClear }) {
         <span className="flex ml-37">Qty</span>
         <span>Price</span>
       </div> */}
-      <div className="flex text-sm text-gray-400 border-b pb-2">
-  <span className="flex-1 ">Item</span>
-  <span className="w-15 text-center">Qty</span>
-  <span className="w-1500 text-right">Price</span>
+      <div className="flex flex-row gap-8 justify-between text-sm text-gray-400 border-b pb-2">
+        
+        <div>
+          <p>Item</p>
+        </div>
+  
+ <div className="flex gap-12">
+   <p>Qty</p>
+  <p>Price</p>
+ </div>
 </div>
 
 

@@ -66,8 +66,9 @@
 import { useState, useEffect } from "react";
 import Sidebar from "./Navbar";
 import Home from "./Home";
-import Second from "./second";
+
 import { FaShoppingCart } from "react-icons/fa";
+import Second from "./second.jsx";
 
 
 function Dashboard() {

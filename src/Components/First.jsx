@@ -31,21 +31,21 @@ function First() {
           />
         </div>
 
-        <div className="flex items-center justify-start w-full ">
-          <h1 className="text-white  text-2xl text-start mt-5">
+        <div className="flex items-center  ">
+          <h1 className="flex text-white text-center text-2xl  mt-5">
             Welcome To Chef Kitchen
           </h1>
         </div>
 
-        <h3 className="font-[montserrat] font-normal text-[16px] leading-none text-white/60 text-start">
-          Check out the awesome food experience! It's <br /> super fresh, quick, and
+        <h3 className="font-[montserrat]  font-normal md:text-center text-[16px] px-5 leading-none text-white/60 text-start">
+          Check out the awesome food experience! It's super fresh, quick, and
           oh-so tasty!
         </h3>
 
         <button 
         onClick={() => navigate("/menu")}
         
-        className="bg-amber-600 text-white font-normal mt-10 hover:bg-amber-500 mb-10 px-30 py-2">
+        className="bg-amber-600 text-white sm:text-lg md:text-xl sm:px-20 md:px-32  font-normal mt-10 hover:bg-amber-500 mb-10 px-20 py-2">
 
           Explore Menu
         </button>
