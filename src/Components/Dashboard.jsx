@@ -68,7 +68,8 @@ import Sidebar from "./Navbar";
 import Home from "./Home";
 
 import { FaShoppingCart } from "react-icons/fa";
-import Second from "./second.jsx";
+import Second from "./Second";
+
 
 
 function Dashboard() {
