@@ -97,7 +97,7 @@ import { FaArrowLeft } from "react-icons/fa";
 
 
 
-function Second({ orders = [], onDelete, onQtyChange, onClose }) {
+function Order({ orders = [], onDelete, onQtyChange, onClose }) {
 
   const subtotal = orders.reduce(
     (sum, item) => sum + item.price * item.qty,
@@ -286,6 +286,6 @@ function Second({ orders = [], onDelete, onQtyChange, onClose }) {
   );
 }
 
-export default Second;
+export default Order;
 
 

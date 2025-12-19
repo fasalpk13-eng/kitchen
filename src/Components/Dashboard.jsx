@@ -68,7 +68,8 @@ import Sidebar from "./Navbar";
 import Home from "./Home";
 
 import { FaShoppingCart } from "react-icons/fa";
-import Second from "./Second";
+import Order from "./Order";
+
 
 
 
@@ -167,7 +168,7 @@ function Dashboard() {
       className="w-90 bg-[#1f1d2b] h-full"
       onClick={(e) => e.stopPropagation()}
     >
-      <Second
+      <Order
         orders={orders}
         onDelete={deleteOrder}
         onQtyChange={updateQty}
